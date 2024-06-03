@@ -1,0 +1,51 @@
+<html>
+
+<head>
+	<title> just for you </title>
+	<style>
+		*{font-size: 60px;}
+		body{background-color:#DEB887;}
+	</style>
+	
+
+</head>
+
+
+<body>
+<center>
+	<h1> Greeting  App</h1>
+	<form onsubmit= "show()">
+	<input type = "text" placeholder="Enter Your Name" id="name"/>
+	<br><br><br>
+
+	<input type = "submit"/>
+	<h2 id = "msg"> <h2>
+	</form>
+
+	<script>
+		function show()
+		{
+			event.preventDefault();
+			let name = document.getElementById("name");
+			let msg = document.getElementById("msg");
+		
+			let d = new Date();
+			let hr = d.getHours();
+			let res="";
+			if(hr<12)
+				res= "Good Morning " +name.value +", Love you ❤";
+			else if(hr<16)
+				res = "Good Afternoon " +name.value + ", Love You ❤";
+			else
+				res = "Good Evening " +name.value + ", Love You ❤";
+			msg.innerHTML = res;
+		}
+	</script>
+	
+	
+	
+</center>
+</body>
+
+
+</html>
